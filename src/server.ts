@@ -18,7 +18,7 @@ const PORT: string = process.env.PORT || '3000';
 
 server.use(express.urlencoded({extended: true}))
 
-server.use(express.static('public'));
+server.use(express.static(path.join(__dirname.replace('\\src', ''),'public')));
 server.set('views', path.join(__dirname.replace('\\src', ''), 'views'));
 server.engine('view engine', ejs.renderFile);
 server.set('view engine', 'ejs');
