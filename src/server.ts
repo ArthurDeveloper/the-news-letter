@@ -6,6 +6,8 @@ import firebase from 'firebase';
 
 import newsRouter from './routes/new-validation';
 
+import './firebase-setup';
+
 import newsApiRouter from './api/news';
 
 const server = express();
