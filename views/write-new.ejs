@@ -18,11 +18,11 @@
 <body>
     <%- include('./partials/topbar.ejs') %>
     
-    <span id="errors">
-        <% if (error !== null) { %>
+    <% if (error !== null) { %>
+        <span id="errors">
             <%= error %>
-        <% } %>
-    </span>
+        </span>
+    <% } %>
 
     <div id="content">
         <div id="form-new-container"> 

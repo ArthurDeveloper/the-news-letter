@@ -1,7 +1,7 @@
 async function getNews() {
-    const news = await fetch('http://thenewsletter.herokuapp.com/api/news')
+    const news = await fetch('https://the-news-letter.herokuapp.com/api/news')
                     .then((res) => {
-                        return res.json();
+                        return res;
                     })
                     .catch((error) => {
                         console.log(`Error while trying to get the news: ${error}`)
