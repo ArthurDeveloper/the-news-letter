@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrando notícia...</title>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- Partials styles -->
+    <link rel="stylesheet" href="/styles/partials/topbar.css">
+
+    <link rel="stylesheet" href="/styles/new-validation-response.css">
+</head>
+<body>
+    <%- include('./partials/topbar.ejs') %>
+
+    <div id="sucess-msg-container">
+        <h2 id="sucess-msg-title">Sucesso!</h1>
+        <h4 id="sucess-msg">
+            Sua notícia foi cadastrada com 
+                <span style="color: var(--primary-color)">
+                    sucesso!
+                </span>
+        </h4>
+
+        
+        <div id="back-to-home-wrapper">
+            <span id="back-to-home" style="display: block; text-align: center">
+                <!-- TODO: Colocar um svg de casinha aqui dps -->
+                Voltar para <a href="/">Home</a>
+            </span>
+        </div>
+    </div>
+
+    <script src="/scripts/new-validation-response.js"></script>
+</body>
+</html>

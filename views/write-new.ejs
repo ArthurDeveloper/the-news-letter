@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreva uma notícia</title>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- Partials styles -->
+    <link rel="stylesheet" href="/styles/partials/topbar.css">
+
+    <link rel="stylesheet" href="/styles/write-new.css">
+</head>
+<body>
+    <%- include('./partials/topbar.ejs') %>
+    
+    <span id="errors">
+        <% if (error !== null) { %>
+            <%= error %>
+        <% } %>
+    </span>
+
+    <div id="content">
+        <div id="form-new-container"> 
+            <form id="form-new" method="POST">
+                
+                <fieldset>
+                    <div>
+                        <label for="new-title">Título: </label>
+                        <input type="text" id="new-title" name="newTitle" />
+                    </div>
+
+                    <div>
+                        <label for="new-content">Conteúdo: </label>
+                        <textarea type="text" id="new-content" name="newContent" spellcheck
+                        placeholder="Digite o conteúdo da sua notícia aqui (Dica: atente-se às regras de pontuação, acentuação e gramática no geral)">
+
+                        </textarea>
+                    </div>
+
+                    
+                    <button type="submit" id="new-submit">Publicar</button>
+                    
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="hand-image-container">
+            <img src="/images/hand-writing.png" id="hand-image">
+        </div>
+    </div>
+
+    <script src="/scripts/new-validation.js"></script>
+    <script src="/scripts/new-validation-error.js"></script>
+</body>
+</html>

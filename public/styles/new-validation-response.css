@@ -1,0 +1,25 @@
+#sucess-msg-container {
+    display: flex;
+    height: 95%;
+    min-height: 95%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sucess-msg-title, #sucess-msg {
+    text-align: center;
+    margin: 8px;
+    font-weight: 400;
+}
+
+#sucess-msg-title {
+    font-size: 4em;
+}
+
+#sucess-msg {
+    color: #CCCCCC;
+}
+
+#back-to-home {
+    margin-top: 50px;
+}

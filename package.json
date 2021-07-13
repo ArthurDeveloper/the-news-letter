@@ -1,0 +1,37 @@
+{
+  "name": "newsletter",
+  "version": "1.0.0",
+  "description": "Um app para cadastro de notícias.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "ts-node-dev --respawn src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "newsletter"
+  },
+  "keywords": [
+    "news",
+    "newsletter",
+    "noticias",
+    "site"
+  ],
+  "author": "Arthur Developer",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "firebase": "^8.7.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.0.7",
+    "@types/express": "^4.17.13",
+    "@types/firebase": "^3.2.1",
+    "@types/node": "^16.3.1",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8"
+  }
+}

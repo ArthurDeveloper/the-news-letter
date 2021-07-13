@@ -1,0 +1,32 @@
+#topbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    border-bottom: 1px solid #C4C4C4;
+    width: 100%;
+    height: 75px;
+}
+
+#topbar-title {
+    position: absolute !important;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.options {
+    margin-top: 28.5px;
+    margin-right: 25px;
+}
+
+.option {
+    margin-left: 25px;
+}
+
+.options > ul > li {
+    list-style: none;
+    display: inline-block;
+}
