@@ -3,21 +3,23 @@ import firebase from 'firebase';
 
 const router = Router();
 
-
-
 router.get('/', (req: Request, res: Response) => {
     res.render('write-new', {error: null});
 });
 
 router.post('/', async (req: Request, res: Response) => {
+    
+    const titleCase = (string: String) => {
+        return string.replace(string[0], string[0].toUpperCase());
+    }
 
     let newsQtt: number = await firebase.database().ref('/news/').get().then((snapshot) => {
         if (snapshot.val()) {
-            return Object.keys(snapshot.val()).length || 0;
+            return Object.keys(snapshot.val()).length;
         }
     });
 
-    let id: number = newsQtt;
+    let id: number = newsQtt ?? 0;
 
     let newAlreadyExists: boolean;
 
@@ -25,9 +27,8 @@ router.post('/', async (req: Request, res: Response) => {
                                     (data) => {
                                         let news = data.val();
                                         news = Object.values(news);
-                                        console.log(news);
                                         for (let curNew of news) {
-                                            if (curNew.title === req.body.newTitle.trimStart() &&
+                                            if (curNew.title   === req.body.newTitle.trimStart() &&
                                                 curNew.content === req.body.newContent.trimStart()) {
                                                 newAlreadyExists = true;
                                             }
@@ -44,8 +45,8 @@ router.post('/', async (req: Request, res: Response) => {
 
     if (req.method === 'POST') {
         firebase.database().ref(`news/${id}`).set({
-            title: req.body.newTitle.trimStart(),
-            content: req.body.newContent.trimStart()
+            title: titleCase(req.body.newTitle.trimStart()),
+            content: titleCase(req.body.newContent.trimStart())
         });
     }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The latest news</title>
+    <title>404 - Não encontrado</title>
 
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/fonts.css">
@@ -13,24 +13,16 @@
     <!-- Partials styles -->
     <link rel="stylesheet" href="/styles/partials/topbar.css">
 
-    <link rel="stylesheet" href="/styles/news.css">
+    <link rel="stylesheet" href="/styles/404.css">
 </head>
 <body>
-
     <%- include('./partials/topbar.ejs') %>
 
-    <div id="news">
-
+    <div class="centered" id="container-404">
+        <h1 id="h1-404">404</h1>
+        <h3 id="not-found-advice">
+            Esta página não foi encontrada. Deseja voltar para <a href="/">home</a>?
+        </h3>
     </div>
-
-    <div class="centered">
-        <div id="loading-advice">
-            Carregando...
-        </div>
-    </div>
-
-    <script src="/scripts/getNews.js"></script>
-    <script src="/scripts/showNews.js"></script>
-    
 </body>
 </html>

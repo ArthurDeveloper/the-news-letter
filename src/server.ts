@@ -4,11 +4,10 @@ import * as path from 'path';
 import cors from 'cors';
 
 import firebase from 'firebase';
-
-import newsRouter from './routes/new-validation';
-
 import './firebase-setup';
 
+import newValidationRouter from './routes/new-validation';
+import newsRouter from './routes/news';
 import newsApiRouter from './api/news';
 
 const server = express();
@@ -35,11 +34,12 @@ router.get('/news', (req, res) => {
     res.render('news');
 });
 
-server.use('/api', newsApiRouter);
 server.use('/', router);
-server.use('/write-new', newsRouter);
+server.use('/api', newsApiRouter);
+server.use('/write-new', newValidationRouter);
+server.use('/new', newsRouter);
 
 
 server.listen(PORT, () => {
-    console.log(`Running server in http://thenewsletter.herokuapp.com`);
+    console.log(`Running server in https://the-news-letter.herokuapp.com`);
 });

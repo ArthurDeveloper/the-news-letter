@@ -1,0 +1,16 @@
+#container-404 {
+    display: flex;
+    flex-direction: column;
+    height: 80% !important;
+}
+
+#h1-404 {
+    font-weight: 400;
+    font-size: 12em;
+}
+
+#not-found-advice {
+    font-weight: 200;
+    font-size: 1em;
+    color: #C4C4C4;
+}

@@ -7,7 +7,7 @@ function validateForm() {
         alert('Título ultrapassa o máximo de caracteres!');
         form.newTitle.focus();
         return false;
-    } else if (newTitle.value.length === 0) {
+    } else if (newTitle.value.trim().length === 0) {
         alert('A notícia precisa ter um título!');
         form.newTitle.focus();
         return false;
@@ -19,7 +19,7 @@ function validateForm() {
         alert('Conteúdo ultrapassa o máximo de caracteres!');
         form.newContent.focus();
         return false;
-    } else if (newContent.value.length === 0) {
+    } else if (newContent.value.trim().length === 0) {
         alert('A notícia precisa ter um conteúdo!');
         form.newContent.focus();
         return false;
